@@ -1,0 +1,58 @@
+name: Platform Engineering request
+description: Request platform work, support, or a change from the Platform Engineering team.
+title: "[Platform request] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Tell us what you need and why. This repository is public: do not include secrets, private customer data, or sensitive security details. A Platform Engineering team member will triage your request before it enters the team's project.
+  - type: input
+    id: team
+    attributes:
+      label: Requesting team
+      description: Which team or group is requesting this work?
+      placeholder: Example: Thunderbird Pro
+    validations:
+      required: true
+  - type: dropdown
+    id: request-type
+    attributes:
+      label: Request type
+      options:
+        - New capability or change
+        - Help or consultation
+        - Incident follow-up or reliability improvement
+        - Access or configuration
+        - Other or unsure
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: What do you need?
+      description: Describe the requested outcome. Include the current behavior and desired behavior when relevant.
+      placeholder: We need ... so that ...
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why is this needed?
+      description: Who is affected, what is blocked, and what happens if this is delayed?
+    validations:
+      required: true
+  - type: input
+    id: timing
+    attributes:
+      label: Timing or deadline
+      description: Include a date and reason if there is a deadline. Leave blank if there is none.
+      placeholder: Example: Before the October 15 launch because ...
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context and links
+      description: Add related issues, designs, or documentation that are safe to share publicly. Summarize sensitive context without posting it here.
+    validations:
+      required: false
